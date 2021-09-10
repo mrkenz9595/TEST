@@ -46,8 +46,8 @@ jobs:
       run: |
         cd asuswrt
         cp -r tools/brcm /opt/
-        cp -r tools/buildroot-gcc342.tar.bz2 /opt/
-        tar xf buildroot-gcc342.tar.bz2
+        cp tools/buildroot-gcc342.tar.bz2 /opt/
+        tar xf /opt/buildroot-gcc342.tar.bz2
     - name: Compile firmware
       id: compile
       run: |
