@@ -14,9 +14,9 @@ on:
         required: false
         default: 'false'
 env:
-  REPO_URL: https://github.com/gorden5566/asuswrt-ac1200hp
+  REPO_URL: https://github.com/lukasz1992/asuswrt-xiaomi
   REPO_BRANCH: master
-  DEVICE_NAME: rt-ac1200hp
+  DEVICE_NAME: rt-n56ub1
   TZ: Asia/Ho_Chi_Minh
 
 jobs:
@@ -46,8 +46,9 @@ jobs:
       run: |
         cd asuswrt
         cp -r tools/brcm /opt/
-        cp tools/buildroot-gcc342.tar.bz2 /opt/
-        tar xf /opt/buildroot-gcc342.tar.bz2
+        cd /opt/
+        wget https://github.com/gorden5566/asuswrt-ac1200hp/raw/master/tools/buildroot-gcc342.tar.bz2
+        tar xf buildroot-gcc342.tar.bz2
     - name: Compile firmware
       id: compile
       run: |
