@@ -6,10 +6,13 @@
 name: Build AsusWRT
 
 on:
-  push:
-    paths:
-      - 'triggers/build-asuswrt.md'
-
+  repository_dispatch:
+  workflow_dispatch:
+    inputs:
+      ssh:
+        description: 'SSH connection to Actions'
+        required: false
+        default: 'false'
 env:
   REPO_URL: https://github.com/gorden5566/asuswrt-ac1200hp
   REPO_BRANCH: master
