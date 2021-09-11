@@ -61,4 +61,4 @@ jobs:
       if: steps.compile.outputs.status == 'success'
       with:
         name: ${{ env.DEVICE_NAME }}_asuswrt_${{ env.DATE }}
-        path: asuswrt/release/src-ra-5010/image/*.trx
+        path: /home/runner/work/test/test/asuswrt/release/src-ra-5010/image/*.trx
