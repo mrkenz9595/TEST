@@ -16,12 +16,12 @@ on:
 env:
   REPO_URL: https://github.com/lukasz1992/asuswrt-xiaomi
   REPO_BRANCH: master
-  DEVICE_NAME: rt-mỉ4a
+  DEVICE_NAME: rt-mir4a
   TZ: Asia/Ho_Chi_Minh
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-18.04
     if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
