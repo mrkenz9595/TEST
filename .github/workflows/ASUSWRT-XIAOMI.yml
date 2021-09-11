@@ -3,7 +3,7 @@
 #            hanwckf | https://github.com/hanwckf             #
 ###############################################################
 
-name: Build AsusWRT
+name: Build AsusWRT-XIAOMI
 
 on:
   repository_dispatch:
