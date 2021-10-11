@@ -732,6 +732,7 @@ enum {
 #define MODEL_RTNEWIFI3 MODEL_RTAC85U
 #define MODEL_RTHIWIFI4 MODEL_RTAC85U
 #define MODEL_RTE8820S MODEL_RTAC85U
+#define MODEL_RTAC101 MODEL_RTAC85U
 
 /* NOTE: Do not insert new entries in the middle of this enum,
  * always add them to the end! */
