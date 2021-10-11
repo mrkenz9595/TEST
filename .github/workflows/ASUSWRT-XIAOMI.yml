@@ -16,7 +16,7 @@ on:
 env:
   REPO_URL: https://github.com/lukasz1992/asuswrt-xiaomi
   REPO_BRANCH: master
-  DEVICE_NAME: rt-mir4a
+  DEVICE_NAME: rt-newifi3
   TZ: Asia/Ho_Chi_Minh
 
 jobs:
