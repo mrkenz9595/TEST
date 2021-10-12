@@ -15,7 +15,7 @@ on:
         default: 'false'
 env:
   REPO_URL: https://github.com/mrkenz9595/AsusWRT-MT7621.git
-  REPO_BRANCH: master
+  REPO_BRANCH: main
   DEVICE_NAME: rt-ac101
   TZ: Asia/Ho_Chi_Minh
 
@@ -53,7 +53,7 @@ jobs:
       run: |
         export PATH=$PATH:/opt/brcm/hndtools-mipsel-linux/bin:/opt/brcm/hndtools-mipsel-uclibc/bin:/opt/buildroot-gcc463/bin
         cd asuswrt/release/src-ra-5010
-        make -i $DEVICE_NAME
+        make $DEVICE_NAME
         echo "::set-output name=status::success"
         echo "DATE=$(date +"%Y%m%d%H%M")" >> $GITHUB_ENV
     - name: Upload firmware
