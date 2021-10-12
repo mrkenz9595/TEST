@@ -1,0 +1,11 @@
+prefix=
+exec_prefix=
+libdir=/home/duong/AsusWRT-MT7621/release/src-ra-5010/router/json-c
+includedir=/home/duong/AsusWRT-MT7621/release/src-ra-5010/router/json-c
+
+Name: json
+Description: JSON implementation in C
+Version: 0.12.1
+Requires:
+Libs:  -L/home/duong/AsusWRT-MT7621/release/src-ra-5010/router/json-c -ljson-c
+Cflags: -I/home/duong/AsusWRT-MT7621/release/src-ra-5010/router/json-c

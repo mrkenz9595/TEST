@@ -3981,7 +3981,7 @@ int init_nvram(void)
 #endif /* Newifi*/
 
 #if defined(RTAC101) 
-	case MODEL_RTNEWIFI3:
+	case MODEL_RTAC101:
 		nvram_set("boardflags", "0x100"); // although it is not used in ralink driver, set for vlan
 		nvram_set("vlan1hwname", "et0");  // vlan. used to get "%smacaddr" for compare and find parent interface.
 		nvram_set("lan_ifname", "br0");
@@ -3999,8 +3999,8 @@ int init_nvram(void)
 
                 nvram_set_int("led_pwr_gpio", 15|GPIO_ACTIVE_LOW);
                 nvram_set_int("btn_rst_gpio", 18|GPIO_ACTIVE_LOW);
-		nvram_set_int("led_5g_gpio",  17|GPIO_ACTIVE_LOW);
-		nvram_set_int("led_2g_gpio",  13|GPIO_ACTIVE_LOW);
+		nvram_set_int("led_5g_gpio", 17|GPIO_ACTIVE_LOW);
+		nvram_set_int("led_2g_gpio", 13|GPIO_ACTIVE_LOW);
 
 		eval("rtkswitch", "11");
 		nvram_set("ct_max", "300000"); // force
