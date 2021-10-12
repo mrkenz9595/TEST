@@ -47,13 +47,13 @@ jobs:
         cd asuswrt
         cp -r tools/brcm /opt/
         cp tools/buildroot-gcc463_32bits.tar.bz2 /opt
-        tar -xf /opt/buildroot-gcc463_32bits.tar.bz2
+        tar -xvjf /opt/buildroot-gcc463_32bits.tar.bz2
     - name: Compile firmware
       id: compile
       run: |
         cd asuswrt/release/src-ra-5010
         export PATH=$PATH:/opt/brcm/hndtools-mipsel-linux/bin:/opt/brcm/hndtools-mipsel-uclibc/bin:/opt/buildroot-gcc463/bin
-        make $DEVICE_NAME
+        make -i $DEVICE_NAME
         echo "::set-output name=status::success"
         echo "DATE=$(date +"%Y%m%d%H%M")" >> $GITHUB_ENV
     - name: Upload firmware
