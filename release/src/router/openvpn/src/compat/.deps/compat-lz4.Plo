@@ -1,3 +1,0 @@
-compat-lz4.lo compat-lz4.o: compat-lz4.c ../../config.h
-
-../../config.h:

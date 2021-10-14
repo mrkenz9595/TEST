@@ -1,3 +1,0 @@
-console_systemd.o console_systemd.o: console_systemd.c ../../config.h
-
-../../config.h:
