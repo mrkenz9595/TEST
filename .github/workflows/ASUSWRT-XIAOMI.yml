@@ -53,6 +53,7 @@ jobs:
       run: |
         cd asuswrt/release/src-ra-5010
         export PATH=/opt/brcm/K26/hndtools-mipsel-uclibc-4.2.4/bin:$PATH
+        export PATH=$PATH:/opt/brcm/K26/hndtools-mipsel-linux/bin:/opt/brcm/K26/hndtools-mipsel-uclibc/bin:/opt/buildroot-gcc463/bin
         make -i $DEVICE_NAME
         echo "::set-output name=status::success"
         echo "DATE=$(date +"%Y%m%d%H%M")" >> $GITHUB_ENV
