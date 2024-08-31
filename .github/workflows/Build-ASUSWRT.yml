@@ -22,7 +22,10 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@main
+      uses: actions/checkout@v3
+      with:
+        repository: mrkenz9595/AsusWRT-MT7621
+        ref: ${{ env.REPO_BRANCH }}
 
     - name: Initialize environment
       env:
@@ -33,11 +36,6 @@ jobs:
         sudo -E apt-get -y install git autoconf automake bash bison bzip2 diffutils file flex m4 g++ gawk groff-base libncurses-dev libtool libslang2 make patch perl pkg-config shtool subversion tar texinfo zlib1g zlib1g-dev git-core gettext libexpat1-dev libssl-dev cvs gperf unzip python3 python-is-python3 libxml-parser-perl gcc-multilib libxml2-dev g++-11 g++-multilib libncurses5 mtd-utils libncurses5-dev libvorbis-dev autopoint autogen sed build-essential intltool libglib2.0-dev xutils-dev lib32z1-dev lib32stdc++6
         sudo -E apt-get -y autoremove --purge
         sudo -E apt-get clean
-    - name: Clone source code
-      run: |
-        git clone $REPO_URL asuswrt
-        cd asuswrt
-        git checkout $REPO_BRANCH
     - name: Prepare toolchain
       run: |
         cd asuswrt
