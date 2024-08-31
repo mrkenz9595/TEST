@@ -38,7 +38,7 @@ jobs:
         sudo -E apt-get clean
     - name: Prepare toolchain
       run: |
-        cd asuswrt
+        cd AsusWRT-MT7621
         cp -r tools/brcm /opt/
         cp tools/buildroot-gcc342.tar.bz2 /opt/
         cp tools/buildroot-gcc463_32bits.tar.bz2 /opt/
@@ -49,7 +49,7 @@ jobs:
       id: compile
       run: |
         export PATH=$PATH:/opt/brcm/hndtools-mipsel-linux/bin:/opt/brcm/hndtools-mipsel-uclibc/bin:/opt/buildroot-gcc463/bin
-        cd asuswrt/release/src-ra-5010
+        cd AsusWRT-MT7621/release/src-ra-5010
         make -i $DEVICE_NAME
         echo "::set-output name=status::success"
         echo "DATE=$(date +"%Y%m%d%H%M")" >> $GITHUB_ENV
@@ -58,4 +58,4 @@ jobs:
       if: steps.compile.outputs.status == 'success'
       with:
         name: ${{ env.DEVICE_NAME }}_asuswrt_${{ env.DATE }}
-        path: asuswrt/release/src-ra-5010/image/*.trx
+        path: AsusWRT-MT7621/release/src-ra-5010/image/*.trx
