@@ -12,7 +12,7 @@ on:
 env:
   REPO_URL: https://github.com/mrkenz9595/AsusWRT-MT7621.git
   REPO_BRANCH: master
-  DEVICE_NAME: rt-ac101
+  DEVICE_NAME: rt-mir3g
   TZ: Asia/Ho_Chi_Minh
 
 jobs:
